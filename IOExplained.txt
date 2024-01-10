@@ -1,0 +1,24 @@
+The Input/Output package consists of a series of methods that all can read information input and output that information as well.
+
+I have created two classes two handle this logic: Input and FileIO
+————————————————————————————————
+The Input class consists of methods that can receive input from the user’s keyboard through the console. It is widely used throughout the whole program, as there are many instances where user input is needed to provide input of some kind to make the methods more interactive, instead of hardcoding the data needed. 
+
+The two methods in Input are:
+getString(String s); <- A method that can receive a String input from the user - this can be sentence, but also numbers which can be parsed to an Integer, as seen in the next method.
+
+getInt(); + getInt(String s) <- A method that can receive an Integer input from the user. This can be any whole number, an there are an error handling incorporated in the method, should the user write anything other than a whole number. The method has also been overloaded to be able to provide a question to the user when calling the method, rather than just asking them to input a number.
+————————————————————————————————
+The FileIO class consists of methods that can read/write from files, display all files on the current directory, as well as delete the files we’ve created/imported. 
+
+The methods in FileIO are:
+writeToFile(String fileName, String content); <- A method that will write the input text content into a .txt file with the name of the user’s choosing.
+
+readFromFile(String fileName); <- A method that can display the content from a .txt file.
+
+displayAllFile(); <- A method that can display all .txt files in the current directory
+
+deleteFile(); <- A method that can delete a .txt file in the current directory. If none exists, the method will tell you.
+
+overwriteTxt(String fileName); <- A private helper method I created, as I was creating checks in every method whether the user appended the .txt file extension themselves.
+
